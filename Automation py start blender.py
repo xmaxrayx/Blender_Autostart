@@ -13,13 +13,24 @@ import bpy
 import time
 import subprocess
 
-subprocess.Popen([r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"])
-subprocess.Popen([r"C:/Program Files (x86)/Notepad++/notepad++.exe"])
-subprocess.Popen([r"C:/Windows/System32/calc.exe"])
+class AutomationStartBlender(bpy.types.Operator):
+    # Give it a bl_idname attribute
+    bl_idname = "automation.start_blender"
+    bl_label = "Automation Start Blender"
+    
+    def execute(self, context):
+    
+
+    subprocess.Popen([r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"])
+    subprocess.Popen([r"C:/Program Files (x86)/Notepad++/notepad++.exe"])
+    subprocess.Popen([r"C:/Windows/System32/calc.exe"])
+
+def register():
+    bpy.utils.register_class(automation.start_blender)
 
 
-
-
+def unregister():
+    bpy.utils.unregister_class(automation.start_blender)
 
 
 
